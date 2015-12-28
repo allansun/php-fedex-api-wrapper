@@ -1,27 +1,36 @@
 {
-    "name": "jeremy-dunn/php-fedex-api-wrapper",
-    "description": "API Wrapper for Fedex web services",
-    "keywords": ["shipping","fedex","soap"],
-    "homepage": "https://github.com/JeremyDunn/php-fedex-api-wrapper",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jeremy Dunn",
-            "email": "jeremy@jsdunn.info",
-            "homepage": "http://www.jsdunn.info"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0"
+  "name": "allansun/php-fedex-api-wrapper",
+  "description": "API Wrapper for Fedex web services",
+  "keywords": [
+    "shipping",
+    "fedex",
+    "soap"
+  ],
+  "homepage": "https://github.com/allansun/php-fedex-api-wrapper",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jeremy Dunn",
+      "email": "jeremy@jsdunn.info",
+      "homepage": "https://github.com/JeremyDunn/php-fedex-api-wrapper"
     },
-    "require-dev": {
-        "symfony/console": "2.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "FedEx\\": "src/FedEx/",
-            "FedEx\\Utility\\": "util/"
-        }
+    {
+      "name": "Allan Sun",
+      "email": "allan.sun@bricre.com",
+      "homepage": "https://github.com/allansun"
     }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "symfony/console": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "FedEx\\": "src/FedEx/",
+      "FedEx\\Utility\\": "util/"
+    }
+  }
 }
