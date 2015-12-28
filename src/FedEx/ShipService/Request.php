@@ -1,6 +1,6 @@
 <?php
 namespace FedEx\ShipService;
-    
+
 use FedEx\AbstractRequest;
 
 /**
@@ -22,7 +22,7 @@ class Request extends AbstractRequest
     /**
      * SoapClient object
      *
-     * @var SoapClient
+     * @var \SoapClient
      */
     protected $_soapClient;
 
@@ -55,74 +55,87 @@ class Request extends AbstractRequest
     /**
      * Sends the CreatePendingShipmentRequest and returns the response
      *
-     * @param ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest 
-     * @return stdClass
+     * @param ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest
+     *
+     * @return \stdClass
      */
-    public function getCreatePendingShipmentReply(ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest)
-    {
+    public function getCreatePendingShipmentReply(ComplexType\CreatePendingShipmentRequest $createPendingShipmentRequest
+    ) {
         return $this->_soapClient->createPendingShipment($createPendingShipmentRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the ProcessTagRequest and returns the response
      *
-     * @param ComplexType\ProcessTagRequest $processTagRequest 
-     * @return stdClass
+     * @param ComplexType\ProcessTagRequest $processTagRequest
+     *
+     * @return \stdClass
      */
     public function getProcessTagReply(ComplexType\ProcessTagRequest $processTagRequest)
     {
         return $this->_soapClient->processTag($processTagRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the ProcessShipmentRequest and returns the response
      *
-     * @param ComplexType\ProcessShipmentRequest $processShipmentRequest 
-     * @return stdClass
+     * @param ComplexType\ProcessShipmentRequest $processShipmentRequest
+     *
+     * @return \stdClass
      */
     public function getProcessShipmentReply(ComplexType\ProcessShipmentRequest $processShipmentRequest)
     {
         return $this->_soapClient->processShipment($processShipmentRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the CancelPendingShipmentRequest and returns the response
      *
-     * @param ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest 
-     * @return stdClass
+     * @param ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest
+     *
+     * @return \stdClass
      */
-    public function getCancelPendingShipmentReply(ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest)
-    {
+    public function getCancelPendingShipmentReply(ComplexType\CancelPendingShipmentRequest $cancelPendingShipmentRequest
+    ) {
         return $this->_soapClient->cancelPendingShipment($cancelPendingShipmentRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the DeleteTagRequest and returns the response
      *
-     * @param ComplexType\DeleteTagRequest $deleteTagRequest 
-     * @return stdClass
+     * @param ComplexType\DeleteTagRequest $deleteTagRequest
+     *
+     * @return \stdClass
      */
     public function getDeleteTagReply(ComplexType\DeleteTagRequest $deleteTagRequest)
     {
         return $this->_soapClient->deleteTag($deleteTagRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the DeleteShipmentRequest and returns the response
      *
-     * @param ComplexType\DeleteShipmentRequest $deleteShipmentRequest 
-     * @return stdClass
+     * @param ComplexType\DeleteShipmentRequest $deleteShipmentRequest
+     *
+     * @return \stdClass
      */
     public function getDeleteShipmentReply(ComplexType\DeleteShipmentRequest $deleteShipmentRequest)
     {
         return $this->_soapClient->deleteShipment($deleteShipmentRequest->toArray());
     }
-       /**
+
+    /**
      * Sends the ValidateShipmentRequest and returns the response
      *
-     * @param ComplexType\ValidateShipmentRequest $validateShipmentRequest 
-     * @return stdClass
+     * @param ComplexType\ValidateShipmentRequest $validateShipmentRequest
+     *
+     * @return \stdClass
      */
     public function getValidateShipmentReply(ComplexType\ValidateShipmentRequest $validateShipmentRequest)
     {
         return $this->_soapClient->validateShipment($validateShipmentRequest->toArray());
     }
-   
+
 
 }
 
